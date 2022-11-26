@@ -84,3 +84,7 @@ https://github.com/enovella/fridroid-unpacker.git
 Use this to dump library from memory and fixing broken memory
 
 https://github.com/lasting-yang/frida_dump
+
+## Flutter SSL Pinning bypass
+
+https://github.com/Impact-I/reFlutter
