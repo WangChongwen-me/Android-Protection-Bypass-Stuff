@@ -34,3 +34,13 @@ https://t.me/magiskalpha
 Use this frida. Make sure version used same with frida cli version that exist on ur machine
 
 https://github.com/CrackerCat/strongR-frida-android
+
+## APK decompiler
+
+Mainly use jadx gui. Had amazing feature copy as frida snippet or xposed snippet. Fast string search and decompiler speed.
+
+https://github.com/skylot/jadx
+
+If APK did not decompiled well with jadx gui, use bytecode-viewer as alternative. Bytecode-Viewer had many decompiler tools inside.
+
+https://github.com/Konloch/bytecode-viewer
