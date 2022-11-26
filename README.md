@@ -47,6 +47,8 @@ https://github.com/Konloch/bytecode-viewer
 
 ## Hook runtime dex
 
+I write article for this on CTF writeup here - https://maulvialf.medium.com/write-up-intechctf-android-game-3024629af286. TLDR script on below
+
 ```javascript
 Java.perform(function () {
     var dalvik_system_BaseDexClassLoader = Java.use('dalvik.system.BaseDexClassLoader');
