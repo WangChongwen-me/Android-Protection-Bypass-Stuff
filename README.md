@@ -22,6 +22,6 @@ https://codeshare.frida.re/@dzonerzy/aesinfo/
 
 ## Magisk Alpha
 
-Main magisk released now did not had magiskhide feature. However this feature is exist on magisk alpha (beware for using this on pentest environtment devices only)
+Main magisk released now did not had magiskhide feature. However this feature is exist on magisk alpha (Use this on pentest environtment devices only)
 
 https://t.me/magiskalpha
