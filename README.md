@@ -25,3 +25,10 @@ https://codeshare.frida.re/@dzonerzy/aesinfo/
 Main magisk released now did not had magiskhide feature. However this feature is exist on magisk alpha (Use this on pentest environtment devices only)
 
 https://t.me/magiskalpha
+
+
+## Frida detection bypass
+
+Use this frida. Make sure version used same with frida cli version that exist on ur machine
+
+https://github.com/CrackerCat/strongR-frida-android
