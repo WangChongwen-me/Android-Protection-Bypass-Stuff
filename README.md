@@ -94,6 +94,8 @@ https://github.com/Impact-I/reFlutter
 ## Hook native lib
 
 ```javascript
+// "use strict";
+var didHookApis = false;
 Java.perform(function() {
     // Credit to @enovella:
     // https://github.com/frida/frida/issues/434#issuecomment-423822024
@@ -130,4 +132,47 @@ function hookFunctions() {
             file.write(readzipfiles);
         }
 })}  
+```
+
+## Hook native library with address
+
+```javascript
+// "use strict";
+var didHookApis = false;
+Java.perform(function() {
+    // Credit to @enovella:
+    // https://github.com/frida/frida/issues/434#issuecomment-423822024
+    const System = Java.use("java.lang.System");
+    const Runtime = Java.use('java.lang.Runtime');
+    const SystemLoadLibrary = System.loadLibrary.overload('java.lang.String');
+    const VMStack = Java.use('dalvik.system.VMStack');
+    SystemLoadLibrary.implementation = function(library) {
+        const loaded = Runtime.getRuntime().loadLibrary0(
+            VMStack.getCallingClassLoader(), library
+        );
+        if (library.includes("intechfest")) {
+            console.log("[+] Hooked library");
+            hookFunctions();
+        }
+        return loaded;
+    }
+});
+var inc = 0;
+function hookFunctions() {
+
+    const ghidraImageBase = 0x00040000; // example value get the real value in Ghidra from Window -> Memory map -> Set Image Base
+    const moduleName = "libintechfest.so";
+    const moduleBaseAddress = Module.findBaseAddress(moduleName);
+    const functionRealAddress = moduleBaseAddress.add(0x000000000001003C); // SSM::Decrypt
+
+    Interceptor.attach(functionRealAddress, {
+        onEnter: function(args) {
+        },
+        onLeave: function(retval) {
+            send("================")
+            var one = ptr(retval).readCString();
+            send(one)
+        }
+    })    
+};
 ```
