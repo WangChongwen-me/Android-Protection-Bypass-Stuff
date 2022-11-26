@@ -90,3 +90,44 @@ https://github.com/lasting-yang/frida_dump
 Self explanatory
 
 https://github.com/Impact-I/reFlutter
+
+## Hook native lib
+
+```javascript
+Java.perform(function() {
+    // Credit to @enovella:
+    // https://github.com/frida/frida/issues/434#issuecomment-423822024
+    const System = Java.use("java.lang.System");
+    const Runtime = Java.use('java.lang.Runtime');
+    const SystemLoadLibrary = System.loadLibrary.overload('java.lang.String');
+    const VMStack = Java.use('dalvik.system.VMStack');
+    SystemLoadLibrary.implementation = function(library) {
+        const loaded = Runtime.getRuntime().loadLibrary0(
+            VMStack.getCallingClassLoader(), library
+        );
+        if (library.includes("konyjsvm")) {
+            console.log("[+] Hooked konyjsvm");
+            hookFunctions();
+        }
+        return loaded;
+    }
+});
+
+function hookFunctions() {
+    Interceptor.attach(Module.getExportByName("libkonyjsvm.so", "lzf"), {
+        onEnter: function(args) {
+            // console.log("[+] Hooked ziping files!");
+            this.zipfiles = args[2]
+            this.ziplength = args[3]            
+        },
+        onLeave: function(retval) {
+            send("================")
+            console.log("zip files length", this.ziplength)
+            var readzipfiles = Memory.readByteArray(this.zipfiles, this.ziplength.toInt32() );
+            // send("zipfiles", readzipfiles)
+            var file = new File("/data/data/com.apk.alfan/" + inc + ".zip","w");
+            inc += 1;
+            file.write(readzipfiles);
+        }
+})}  
+```
