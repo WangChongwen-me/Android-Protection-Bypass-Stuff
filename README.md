@@ -44,3 +44,30 @@ https://github.com/skylot/jadx
 If APK did not decompiled well with jadx gui, use bytecode-viewer as alternative. Bytecode-Viewer had many decompiler tools inside.
 
 https://github.com/Konloch/bytecode-viewer
+
+## Hook runtime dex
+
+```javascript
+Java.perform(function () {
+    var dalvik_system_BaseDexClassLoader = Java.use('dalvik.system.BaseDexClassLoader');
+    dalvik_system_BaseDexClassLoader.$init.overload('java.lang.String', 'java.lang.String', 'java.lang.ClassLoader', '[Ljava.lang.ClassLoader;', 'boolean').implementation = function (dexPath, librarySearchPath, parent, sharedLibraryLoaders, isTrusted) {
+        console.log('BaseDexClassLoader: ' + dexPath);
+        this.$init(dexPath, librarySearchPath, parent, sharedLibraryLoaders, isTrusted);
+        // Save the old class loader reference
+        var oldLoader = Java.classFactory.loader;
+        try {
+            Java.classFactory.loader = this;
+            // add your hook in here
+
+
+            // end hook
+        } catch (Exception) {
+            console.log('Exception: ' + Exception);
+        }
+        // Restore the old class loader reference
+        Java.classFactory.loader = oldLoader;
+    }
+
+});
+```
+
