@@ -91,7 +91,7 @@ Self explanatory
 
 https://github.com/Impact-I/reFlutter
 
-## Hook native lib
+## Hook native lib with function name
 
 ```javascript
 // "use strict";
