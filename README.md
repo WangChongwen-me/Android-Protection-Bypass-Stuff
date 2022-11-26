@@ -73,7 +73,7 @@ Java.perform(function () {
 });
 ```
 
-## Get real dex and defeat packerf
+## Get dex and defeat packer
 
 Use this, and you would get dex files from packer
 
