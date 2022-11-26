@@ -176,3 +176,12 @@ function hookFunctions() {
     })    
 };
 ```
+
+
+## APKLab
+
+Vscode extension that make patching smali easy
+
+https://github.com/APKLab/APKLab
+
+
