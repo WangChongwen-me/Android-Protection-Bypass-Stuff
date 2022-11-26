@@ -73,3 +73,14 @@ Java.perform(function () {
 });
 ```
 
+## Get real dex and defeat packerf
+
+Use this, and you would get dex files from packer
+
+https://github.com/enovella/fridroid-unpacker.git
+
+## Library dumper
+
+Use this to dump library from memory and fixing broken memory
+
+https://github.com/lasting-yang/frida_dump
