@@ -87,4 +87,6 @@ https://github.com/lasting-yang/frida_dump
 
 ## Flutter SSL Pinning bypass
 
+Self explanatory
+
 https://github.com/Impact-I/reFlutter
