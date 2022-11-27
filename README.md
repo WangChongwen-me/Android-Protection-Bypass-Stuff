@@ -184,4 +184,8 @@ Vscode extension that make patching smali easy
 
 https://github.com/APKLab/APKLab
 
+## IDA Frida
 
+Wanna export frida script on native binary? use this
+
+https://github.com/P4nda0s/IDAFrida
