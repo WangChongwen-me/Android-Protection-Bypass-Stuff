@@ -210,3 +210,24 @@ https://github.com/Perfare/Zygisk-Il2CppDumper
 Used for magisk hide replacement. Hide some root detection
 
 https://github.com/LSPosed/LSPosed.github.io/releases
+
+
+## Automatic scanner
+
+https://github.com/MobSF/Mobile-Security-Framework-MobSF
+
+
+## Objection
+
+Metasploit like for frida
+
+https://github.com/sensepost/objection
+
+
+## Webbased Frida GUI
+
+https://github.com/m0bilesecurity/RMS-Runtime-Mobile-Security
+
+https://github.com/nccgroup/house
+
+
