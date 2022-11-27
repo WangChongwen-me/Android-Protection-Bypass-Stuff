@@ -189,3 +189,10 @@ https://github.com/APKLab/APKLab
 Wanna export frida script on native binary? use this
 
 https://github.com/P4nda0s/IDAFrida
+
+
+## Frida Typescript
+
+Wanna use code completion on writing frida scripts. Use typescripts
+
+https://github.com/oleavr/frida-agent-example.git
