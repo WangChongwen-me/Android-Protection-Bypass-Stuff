@@ -196,3 +196,17 @@ https://github.com/P4nda0s/IDAFrida
 Wanna use code completion on writing frida scripts. Use typescripts
 
 https://github.com/oleavr/frida-agent-example.git
+
+## Useful magisk module that used zygisk
+
+### Zygisk-Il2CppDumper
+
+Game code dumper
+
+https://github.com/Perfare/Zygisk-Il2CppDumper
+
+### Shamiko
+
+Used for magisk hide replacement. Hide some root detection
+
+https://github.com/LSPosed/LSPosed.github.io/releases
