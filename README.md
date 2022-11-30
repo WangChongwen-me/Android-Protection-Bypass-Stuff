@@ -230,4 +230,6 @@ https://github.com/m0bilesecurity/RMS-Runtime-Mobile-Security
 
 https://github.com/nccgroup/house
 
+## Monitor Intent & Activity
 
+https://gist.github.com/bet4it/b62ac2d5bd45b8cb699905fa498baf5e
