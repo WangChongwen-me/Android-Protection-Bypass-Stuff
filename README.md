@@ -237,3 +237,9 @@ https://gist.github.com/bet4it/b62ac2d5bd45b8cb699905fa498baf5e
 ## IDA JNI header 
 
 https://gist.github.com/Jinmo/048776db75067dcd6c57f1154e65b868
+
+## GDB Server
+
+https://github.com/kruglinski/gdbserver.git
+
+https://gist.github.com/sekkr1/6adf2741ed3bc741b53ab276d35fd047
