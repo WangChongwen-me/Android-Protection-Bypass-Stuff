@@ -21,6 +21,10 @@ Can relied on this
 
 https://codeshare.frida.re/@dzonerzy/aesinfo/
 
+Modified to view raw string instead of hex
+
+https://raw.githubusercontent.com/maulvialf/Android-Protection-Bypass-Stuff/main/aesinfo.js
+
 
 ## Magisk Alpha
 
