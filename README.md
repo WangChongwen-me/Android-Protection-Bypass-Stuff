@@ -247,3 +247,8 @@ https://gist.github.com/Jinmo/048776db75067dcd6c57f1154e65b868
 https://github.com/kruglinski/gdbserver.git
 
 https://gist.github.com/sekkr1/6adf2741ed3bc741b53ab276d35fd047
+
+
+## Anti Frida bypass script
+
+https://github.com/apkunpacker/AntiFrida_Bypass/blob/main/AntiAntiFrida.js
